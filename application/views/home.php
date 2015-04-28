@@ -1,7 +1,9 @@
 <script type="text/javascript" src="<?php echo base_url();?>js/easySlider1.7.js"></script>
 <script type="text/javascript">
  	$(document).ready(function(){ 
-	  $("#slider").easySlider();
+	  $("#slider").easySlider({
+		    continuous: true
+	 	 });
  	}); 
 </script>
 
@@ -14,6 +16,7 @@
 		
 	</div>
 </section>
+<section class="conteudo">
 <div class="centro">
 	<div class="ultimas_noticias">
 		<h1>ÚLTIMAS NOTÍCIAS</h1>
@@ -51,3 +54,4 @@
 	</div>	
 	
 </div>
+</section>
