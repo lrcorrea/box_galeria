@@ -1,10 +1,7 @@
 <script type="text/javascript" src="<?php echo base_url();?>js/easySlider1.7.js"></script>
 <script type="text/javascript">
  	$(document).ready(function(){ 
-	  $("#slider").easySlider({
-		    auto: true, 
-		    continuous: true
-	 	 });
+	  $("#slider").easySlider();
  	}); 
 </script>
 
