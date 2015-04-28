@@ -330,6 +330,98 @@
 }
 
 .conteudo{
-	float: left;
+	float: left; 
 	width: 100%;
+}
+.bg_lugar{
+	background: url(images/onde_estamos.jpg);
+	width: 100%;
+	height: 336px;
+	float: left;
+	margin-top: 20px;
+	h1{
+		font-size: 50px;
+		font-family: @titulo;
+		color: #ffffff;
+		text-align: center;
+		margin-top: 50px;
+		font-weight: lighter;
+	}
+	p{
+		margin-top: 45px;
+		font-size: 20px;
+		font-family: @texto;
+		text-align: center;
+		color: #ffffff;
+		span{
+			font-weight: bold;
+		}
+	}
+	.saiba_mais{
+		margin: 0 auto;
+		//float: left;
+		display: block;
+		margin-top: 40px;
+		width: 240px;
+		height: 41px;
+		border: 1px solid #ffffff;
+		text-align: center;
+		text-decoration: none;
+		font-size: 22px;
+		color: #ffffff;
+		font-family: @texto;
+		padding-top: 9px;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		&:hover{
+			color: @verde;
+			background: #ffffff;
+		}
+	}
+}
+footer{
+	width: 100%;
+	float: left;
+	.direitos{
+		font-size: 14px;
+		font-family: @texto;
+		margin-left: 20px;
+		float: left;
+		margin-top: 36px;
+	}
+	.contato_rodape{
+		float: left;
+		margin-top: 25px;
+		margin: 25px;
+		width: 235px;
+		height: 37px;
+		border-right: 1px solid @laranja;
+		margin-left: 0;
+		margin-right: 0;
+		img{
+			padding-top: 15px; 
+			float: left;
+		}
+		p{
+			font-size: 14px;
+			font-family: @texto;
+			margin-left: 4px;
+			float: left;
+			padding-top: 10px;
+		}
+	}
+	.telefone{
+		width: 271px;
+		img{
+			margin-left: 37px;
+		}
+	}
+
+	.witcode{
+		float: right;
+		margin-top: 39px;
+		display: block;
+	}
 }

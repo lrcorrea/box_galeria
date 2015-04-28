@@ -64,4 +64,11 @@
 	</div>	
 	
 </div>
+<div class="bg_lugar">
+	<div class="centro">
+		<h1>ONDE ESTAMOS?</h1>
+		<p>CONFIRA A <span>PROGRAMAÇÃO</span> PROJETO, OS <span>ARTISTAS SELECIONADOS</span> E QUAL<br/>SERÁ O <span>PRÓXIMO BAIRRO</span> QUE IRÁ RECEBER O PROJETO BOX GALERIA</p>
+		<a href="" class="saiba_mais">SAIBA MAIS</a>
+	</div>
+</div>
 </section>
