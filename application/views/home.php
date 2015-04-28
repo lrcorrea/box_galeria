@@ -34,7 +34,12 @@
 	
 			<div id="slider">
 				<ul>				
-					<li><a href=""><img src="style/images/img_noticia.jpg"/></a>
+					<li><div class="data">
+							15/04
+						</div>
+							<img src="style/images/img_noticia.jpg"/>
+							<p></p>
+						</a>
 						<a href=""><img src="style/images/img_noticia.jpg"/></a>
 						<a href=""><img src="style/images/img_noticia.jpg"/></a>
 					</li>
