@@ -15,10 +15,17 @@
   <div class="centro">
     <img class="logo" src="style/images/logo.png" alt="Box Galeria">
     <div class="menu">
-      <ul>
+      <ul class="menu_principal">
         <li><a href="">HOME</a></li>
         <li><a href="">SOBRE</a></li>
-        <li><a href="">VISITE</a></li>
+        <li class="abresub">
+          <a href="">VISITE</a>
+          <ul class="submenu">
+            <li><a href="">ARTISTAS SELECIONADOS</a></li>
+            <li><a href="">PROGRAMAÇÃO</a></li>
+            <li><a href="">BAIRRO</a></li>
+          </ul>
+        </li>
         <li><a href="">EQUIPE</a></li>
         <li><a href="">CONTATO</a></li>
       </ul>

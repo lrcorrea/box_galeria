@@ -34,23 +34,28 @@
 	
 			<div id="slider">
 				<ul>				
-					<li><div class="data">
-							15/04
-						</div>
+					<li>
+						<div class="item_noticia">
+							<div>15/10/2088</div>
 							<img src="style/images/img_noticia.jpg"/>
-							<p></p>
-						</a>
-						<a href=""><img src="style/images/img_noticia.jpg"/></a>
-						<a href=""><img src="style/images/img_noticia.jpg"/></a>
+							<p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+							<a href="">LEIA MAIS</a>
+						</div>
+						<div class="item_noticia">
+							<div>15/10/2088</div>
+							<img src="style/images/img_noticia.jpg"/>
+							<p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+							<a href="">LEIA MAIS</a>
+						</div>
+						<div class="item_noticia">
+							<div>15/10/2088</div>
+							<img src="style/images/img_noticia.jpg"/>
+							<p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+							<a href="">LEIA MAIS</a>
+						</div>
+						
 					</li>
-					<li><a href=""><img src="style/images/img_noticia.jpg"/></a>
-						<a href=""><img src="style/images/img_noticia.jpg"/></a>
-						<a href=""><img src="style/images/img_noticia.jpg"/></a>
-					</li>
-					<li><a href=""><img src="style/images/img_noticia.jpg"/></a>
-						<a href=""><img src="style/images/img_noticia.jpg"/></a>
-						<a href=""><img src="style/images/img_noticia.jpg"/></a>
-					</li>			
+								
 				</ul>
 			</div>
 		

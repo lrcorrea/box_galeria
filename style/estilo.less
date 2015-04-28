@@ -30,16 +30,22 @@
 	float: left;
 	width: 790px;
 	z-index: 9999;
-	ul{
+	position:relative;
+	ul.menu_principal{
 		list-style: none;
 		margin-left: 185px;
 		margin-top: 60px;
 		li{
-			display: inline;
+			display: inline-block;
 			font-size: 16px;
 			font-family: @titulo;
 			position: relative;
 			margin-left: 40px;
+			&:hover{
+				.submenu{
+						display:block;
+					}
+			}
 			a{
 				padding-left: 10px;
 				padding-right: 10px;
@@ -54,10 +60,52 @@
 					-webkit-border-radius: 8px;
 					-moz-border-radius: 8px;
 					border-radius: 8px;
+
+					
 				}
 			}
 			
 		}
+		.abresub{
+			height:50px !important;
+		}
+	}
+
+	.submenu{
+
+		background:#FFFFFF;
+		padding:10px;
+		position:absolute;
+		left:0px;
+		top:33px;
+		display:none;
+		width:180px;
+		border-radius:8px;
+		list-style:none;
+
+		&:before{	
+			content:"";
+			position:absolute;
+			
+			top:-5px;
+			left:25px;
+			border-left: 5px solid transparent;
+			  border-right: 5px solid transparent;
+			  border-bottom: 5px solid #FFF;
+			
+		}
+		li{
+			margin-left:0 !important;
+			text-align:left;
+			display:list-item !important;
+			a{ 
+				clear:both;
+				text-align:left !important;
+				padding:0px !important;
+				color:@verde !important;
+			}
+		}
+
 	}
 	.fb_topo{
 		img{
@@ -67,7 +115,7 @@
 		float: right;
 		display: block;
 		position: relative;
-		margin-top: -20px;
+		margin-top: -50px;
 	}
 }
 .conteudo_home{
@@ -189,6 +237,10 @@
 		}			
 
 /* Easy Slider */
+	#slider{
+		margin-top:10px;
+		width:680px;
+	}
 
 	#slider ul, #slider li,
 	#slider2 ul, #slider2 li{
@@ -202,23 +254,45 @@
 			define width and height of list item (slide)
 			entire slider area will adjust according to the parameters provided here
 		*/ 
-		width:680px;
+		width:635px;
 		height:277px;
 		overflow:hidden; 
-		img{
+		.item_noticia{
 			width: 185px;
-			height: 123px;
+			margin-left: 12px;
+			float: left;
+			margin-right: 12px;
+				div{
+					float:left;
+					font-family:@texto;
+					color:@laranja;
+					position:relative;
+					width:185px;
+					&:after{
+						content:"";
+						position:absolute;
+						width:100px;
+						border-top:1px solid #000;
+						top:10px;
+						right:0;
+
+					}
+				}
+
+				
+				p{
+					float:left;
+					font-family:@texto;
+					color:#000;
+				}
+				a{
+					float:left;
+					text-decoration:none;
+					color:@laranja;
+					font-family:@titulo;
+				}
+			}
 			
-			}
-			a{
-				display: block;
-				width: 185px;
-				height: 123px;
-				position: relative;
-				margin-left: 15px;
-				float: left;
-				margin-right: 15px;
-			}
 		}	
 	#prevBtn, #nextBtn,
 	#slider1next, #slider1prev{ 
@@ -227,12 +301,12 @@
 		height:27px;
 		position:absolute;
 		left:660px;
-		top:71px;
+		top:91px;
 		z-index:1000;
 		}	
 	#nextBtn, #slider1next{ 
 		left:660px;
-		top: 35px;
+		top: 55px;
 		}														
 	#prevBtn a, #nextBtn a,
 	#slider1next a, #slider1prev a{  
@@ -240,44 +314,19 @@
 		position:relative;
 		width:27px;
 		height:27px;
-		background:url(images/flecha_esq.png) no-repeat 0 0;	
+		background:url(images/flecha_esq.png) no-repeat 0 0;
+		&:hover{
+			background-position:0px -27px;
+		}	
 		}	
 	#nextBtn a, #slider1next a{ 
 		background:url(images/flecha_dir.png) no-repeat 0 0;	
+		&:hover{
+			background-position:0px -27px;
+		}	
 		}	
 		
-	/* numeric controls */	
-
-	ol#controls{
-		margin:1em 0;
-		padding:0;
-		height:28px;	
-		}
-	ol#controls li{
-		margin:0 10px 0 0; 
-		padding:0;
-		float:left;
-		list-style:none;
-		height:28px;
-		line-height:28px;
-		}
-	ol#controls li a{
-		float:left;
-		height:28px;
-		line-height:28px;
-		border:1px solid #ccc;
-		background:#DAF3F8;
-		color:#555;
-		padding:0 10px;
-		text-decoration:none;
-		}
-	ol#controls li.current a{
-		background:#5DC9E1;
-		color:#fff;
-		}
-	ol#controls li a:focus, #prevBtn a:focus, #nextBtn a:focus{outline:none;}
 	
-/* // Easy Slider */
 }
 
 .conteudo{
