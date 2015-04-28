@@ -1,0 +1,281 @@
+@texto: "roboto_slablight";
+@subtitulo: "roboto_slabbold";
+@titulo: "claire_handregular";
+@verde: #419b9e;
+@laranja: #d03613;
+
+*{
+	margin:0;
+	padding:0;
+}
+.centro{
+	width: 1000px;
+	margin: 0 auto;
+}
+.topo{
+	float: left;
+	background: url(images/menu.png) top center no-repeat;
+	width: 100%;
+	height: 185px;
+	z-index: 9999;
+	position: relative;
+}
+.logo{
+	float: left;
+	margin-top: 35px;
+	margin-left: 12px;
+
+}
+.menu{
+	float: left;
+	width: 790px;
+	z-index: 9999;
+	ul{
+		list-style: none;
+		margin-left: 185px;
+		margin-top: 60px;
+		li{
+			display: inline;
+			font-size: 16px;
+			font-family: @titulo;
+			position: relative;
+			margin-left: 40px;
+			a{
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				text-decoration: none;
+				text-align: center;
+				color: #ffffff;
+				&:hover{
+					background-color: #ffffff;
+					color: @verde;
+					-webkit-border-radius: 8px;
+					-moz-border-radius: 8px;
+					border-radius: 8px;
+				}
+			}
+			
+		}
+	}
+	.fb_topo{
+		img{
+			width: 9px;
+			height: 19px;
+		}
+		float: right;
+		display: block;
+		position: relative;
+		margin-top: -20px;
+	}
+}
+.conteudo_home{
+	float: left;
+	background: url(images/meio_bg.jpg) top center no-repeat;
+	width: 100%;
+	height: 449px;
+	margin-top: -37px;
+	position: relative;
+	h1{
+		font-size: 40px;
+		font-family: @titulo;
+		color: @laranja;
+		text-align: center;
+		margin-top: 100px;
+	}
+	.inscreva_se{
+		margin: 0 auto;
+		margin-top: 60px;
+		width: 330px;
+		height: 42px;
+		border: 1px solid @laranja;
+		color: @laranja;
+		display: block;
+		text-align: center;
+		font-size: 22px;
+		font-family: @texto;
+		padding-top: 10px;
+		text-decoration: none;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		&:hover{
+				background: @laranja;
+				color: #ffffff;
+			}
+	}
+	p{
+		margin-top: 7px;
+		text-align: center;
+		font-size: 14px;
+		color: #000000;
+		font-family: @texto;
+		a{
+			text-decoration: none;
+			color: @laranja;
+		}
+	}
+}
+.ultimas_noticias{
+	float: left;
+	width: 320px;
+	h1{
+		font-size: 30px;
+		color: @laranja;
+		font-family: @subtitulo;
+		margin-top: 20px;
+	}
+	p{
+		float: left;
+		font-family: @texto;
+		color: #000000;
+		font-size: 14px;
+	}
+	.redes_sociais{
+		float: left;
+		width: 100%;
+		.social{
+			float: left;
+			width: 27px;
+			height: 27px;
+			display: block;
+			margin-right: 10px;
+			margin-top: 10px;
+			&:hover{
+				background-position: 0px -27px;
+			}
+		}
+		.fb_icon{
+			background: url(images/face_icon.png);
+		}
+		.tt_icon{
+			background: url(images/twitter_icon.png);
+		}
+		.instagram_icon{
+			background: url(images/instagran_icon.png);
+		}
+	}
+}
+.noticias{
+	width: 680px;
+	float: left;
+    /* image replacement */
+        .graphic, #prevBtn, #nextBtn, #slider1prev, #slider1next{
+            margin:0;
+            padding:0;
+            display:block;
+            overflow:hidden;
+            }
+    /* // image replacement */
+			
+	#container{	
+		margin:0 auto;
+		position:relative;
+		text-align:left;
+		width:690px;
+		background:#fff;		
+		margin-bottom:2em;
+		}	
+	#header{
+		height:80px;
+		line-height:80px;
+		background:#5DC9E1;
+		color:#fff;
+		}				
+	#content{
+		position:relative;
+		}			
+
+/* Easy Slider */
+
+	#slider ul, #slider li,
+	#slider2 ul, #slider2 li{
+		margin:0;
+		padding:0;
+		list-style:none;
+		}
+	#slider2{margin-top:1em;}
+	#slider li, #slider2 li{ 
+		/* 
+			define width and height of list item (slide)
+			entire slider area will adjust according to the parameters provided here
+		*/ 
+		width:680px;
+		height:277px;
+		overflow:hidden; 
+		img{
+			width: 185px;
+			height: 123px;
+			
+			}
+			a{
+				display: block;
+				width: 185px;
+				height: 123px;
+				position: relative;
+				margin-left: 15px;
+				float: left;
+				margin-right: 15px;
+			}
+		}	
+	#prevBtn, #nextBtn,
+	#slider1next, #slider1prev{ 
+		display:block;
+		width:27px;
+		height:27px;
+		position:absolute;
+		left:660px;
+		top:71px;
+		z-index:1000;
+		}	
+	#nextBtn, #slider1next{ 
+		left:660px;
+		top: -10px;
+		}														
+	#prevBtn a, #nextBtn a,
+	#slider1next a, #slider1prev a{  
+		display:block;
+		position:relative;
+		width:27px;
+		height:27px;
+		background:url(images/flecha_esq.png) no-repeat 0 0;	
+		}	
+	#nextBtn a, #slider1next a{ 
+		background:url(images/flecha_dir.png) no-repeat 0 0;	
+		}	
+		
+	/* numeric controls */	
+
+	ol#controls{
+		margin:1em 0;
+		padding:0;
+		height:28px;	
+		}
+	ol#controls li{
+		margin:0 10px 0 0; 
+		padding:0;
+		float:left;
+		list-style:none;
+		height:28px;
+		line-height:28px;
+		}
+	ol#controls li a{
+		float:left;
+		height:28px;
+		line-height:28px;
+		border:1px solid #ccc;
+		background:#DAF3F8;
+		color:#555;
+		padding:0 10px;
+		text-decoration:none;
+		}
+	ol#controls li.current a{
+		background:#5DC9E1;
+		color:#fff;
+		}
+	ol#controls li a:focus, #prevBtn a:focus, #nextBtn a:focus{outline:none;}
+	
+/* // Easy Slider */
+}
