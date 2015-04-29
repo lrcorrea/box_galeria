@@ -29,18 +29,24 @@ class Contato extends CI_Controller {
 		
 				$data['nome']     = $this->input->post('nome');
 				$data['email']    = $this->input->post('email');
+				$data['telefone']    = $this->input->post('telefone');
+				$data['assunto']    = $this->input->post('assunto');
 			    $mensagem         = $this->input->post('mensagem');
 				
 				$this->load->library('email');
-				$this->email->from("contato@floriculturakriativa.com.br","Kriativa");
-				$this->email->to('contato@floriculturakriativa.com.br');
+				$this->email->from("contato@boxgaleria.com.br","Box Galeria");
+				$this->email->to('contato@boxgaleria.com.br');
 				$this->email->subject('Contato encaminhado pelo Website');
-				$this->email->message("Nome: " . $data['nome'] . "\n\n Email: " . $data['email'] . "\n\n Mensagem: " .$mensagem);
+				$this->email->message("Nome: " . $data['nome'] . 
+					                  "\n\n Email: " . $data['email'] .
+					                  "\n\n Fone: " . $data['telefone'] .
+					                  "\n\n Assunto: " . $data['assunto'] .
+					                  "\n\n Mensagem: " .$mensagem);
 				
 				$this->email->send();
 				
 				
-				$dados['title'] = "Ana Camila - Contato";
+				$dados['title'] = "Box Galeria - Contato";
 		
 				$dados['meta'] = "<meta name='description' content='' />";
 				$dados['enviou'] = true;

@@ -15,7 +15,7 @@
   <body>
 <section class="topo">
   <div class="centro">
-    <img class="logo" src="style/images/logo.png" alt="Box Galeria">
+    <img class="logo" src="<?php echo base_url();?>style/images/logo.png" alt="Box Galeria">
     <div class="menu">
       <ul class="menu_principal">
         <li><a href="<?php echo base_url();?>">HOME</a></li>
@@ -23,16 +23,16 @@
         <li class="abresub">
           <a href="" id="visite">VISITE</a>
           <ul class="submenu">
-            <li><a href="">ARTISTAS SELECIONADOS</a></li>
+           <!-- <li><a href="">ARTISTAS SELECIONADOS</a></li>-->
             <li><a href="<?php echo base_url();?>programacao">PROGRAMAÇÃO</a></li>
-            <li><a href="">BAIRRO</a></li>
+          <!--  <li><a href="">BAIRRO</a></li>-->
           </ul>
         </li>
         <li><a href="<?php echo base_url();?>equipe">EQUIPE</a></li>
         <li><a href="<?php echo base_url();?>contato">CONTATO</a></li>
       </ul>
       <div class="fb_topo">
-        <a href=""><img src="style/images/facebook_icon_menu.png"></a>
+        <a href=""><img src="<?php echo base_url();?>style/images/facebook_icon_menu.png"></a>
       </div>
     </div>
   </div>
