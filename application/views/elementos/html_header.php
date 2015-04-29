@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="<?php echo base_url();?>js/jquery.js"></script>
+    
     <link type="text/css" rel="stylesheet" href="<?php echo base_url();?>style/fontes.css"/>
     <link type="text/css" rel="stylesheet" href="<?php echo base_url();?>style/estilo.css"/>
+    <script type="text/javascript" src="<?php echo base_url();?>js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>js/easySlider1.7.js"></script>
 
 

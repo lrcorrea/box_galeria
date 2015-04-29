@@ -13,7 +13,7 @@ class Equipe extends CI_Controller {
 		
 		$dados['meta'] = "<meta name='description' content='' />";
 		
-		
+		$dados['equipe'] = $this->db->get("parceiros")->result();
 		
 		$this->load->view('elementos/html_header',$dados);
         $this->load->view('equipe',$dados);

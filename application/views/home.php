@@ -2,7 +2,7 @@
 <script type="text/javascript">
  	$(document).ready(function(){ 
 	  $("#slider").easySlider({
-		    continuous: true
+		    //continuous: true
 	 	 });
  	}); 
 </script>
@@ -33,29 +33,29 @@
 		<div id="content">
 	
 			<div id="slider">
-				<ul>				
-					<li>
+				<ul>	
+					<li>	
+				<?php $i = 0; foreach($noticias as $noticia): ?>
+				<?php 
+					$this->db->where("id_noticia",$noticia->id);
+					$foto = $this->db->get("fotos_noticia")->result();
+				?>		
+					
 						<div class="item_noticia">
-							<div>15/10/2088</div>
-							<img src="style/images/img_noticia.jpg"/>
-							<p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
-							<a href="">LEIA MAIS</a>
-						</div>
-						<div class="item_noticia">
-							<div>15/10/2088</div>
-							<img src="style/images/img_noticia.jpg"/>
-							<p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
-							<a href="">LEIA MAIS</a>
-						</div>
-						<div class="item_noticia">
-							<div>15/10/2088</div>
-							<img src="style/images/img_noticia.jpg"/>
-							<p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
-							<a href="">LEIA MAIS</a>
+							<div><?php echo data_us_to_br($noticia->data);?></div>
+							<img src="<?php echo base_url();?>phpthumb/phpThumb.php?src=../imgs/<?php echo $foto[0]->nome;?>&w=185&h=123&zc=1&q=100">
+							<p><?php echo $noticia->titulo;?></p>
+							<a href="<?php echo base_url();?>noticias/detahe/<?php echo $noticia->id;?>">LEIA MAIS</a>
 						</div>
 						
-					</li>
-								
+						<?php if($i == 2) { 
+							echo "</li><li>";
+							$i = -1;
+						} ?>
+						
+					
+				<?php $i++; endforeach; ?>
+					</li>			
 				</ul>
 			</div>
 		

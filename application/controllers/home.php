@@ -14,6 +14,10 @@ class Home extends CI_Controller {
 		$dados['meta'] = "<meta name='description' content='' />";
 		
 		
+		$this->db->limit("9");
+		$this->db->order_by("data","desc");
+		$dados['noticias'] = $this->db->get("noticias")->result();
+
 		$this->load->view('elementos/html_header',$dados);
         $this->load->view('home',$dados);
         $this->load->view('elementos/html_footer',$dados);
