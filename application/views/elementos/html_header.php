@@ -9,7 +9,8 @@
 
 
     <meta charset="UTF-8">
-    <title>Box Galeria</title>
+     <title><?php echo $title;?></title>
+    <?php echo $meta;?>
 </head>
   <body>
 <section class="topo">
@@ -20,7 +21,7 @@
         <li><a href="<?php echo base_url();?>">HOME</a></li>
         <li><a href="<?php echo base_url();?>sobre">SOBRE</a></li>
         <li class="abresub">
-          <a href="">VISITE</a>
+          <a href="" id="visite">VISITE</a>
           <ul class="submenu">
             <li><a href="">ARTISTAS SELECIONADOS</a></li>
             <li><a href="<?php echo base_url();?>programacao">PROGRAMAÇÃO</a></li>

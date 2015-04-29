@@ -2,8 +2,8 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L]
-RewriteCond %{HTTP_HOST} ^closedo.com
-RewriteRule ^ http://www.closedo.com%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^boxgaleria.com.br
+RewriteRule ^ http://www.boxgaleria.com.br%{REQUEST_URI} [L,R=301]
 
 
 
