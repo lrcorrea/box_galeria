@@ -12,9 +12,7 @@ $(document).ready(function(){
   <div class="bg_sobre">
       <h1>CONTATO</h1>
       <h3>ENTRE EM CONTATO CONOSCO PELO FORMULÁRIO ABAIXO</h3>
-      
-    </div>
-  <div class="centro" style="width:600px;">
+      <div class="centro" style="width:600px;">
         <div class="formulario">
           <form method="post"  id="formContato">
             <input required type="text" name="nome" placeholder="Nome"/>
@@ -28,4 +26,6 @@ $(document).ready(function(){
         </div>
 
   </div>
+    </div>
+  
  </section> 
