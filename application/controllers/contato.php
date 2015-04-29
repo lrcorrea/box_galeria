@@ -8,7 +8,7 @@ class Contato extends CI_Controller {
 
     function index() {
 		
-		$dados['title'] = "Kriativa - Contato";
+		$dados['title'] = "Box Galeria - Contato";
 		
 		$dados['meta'] = "<meta name='description' content='' />";
 		$dados['enviou'] = false;
@@ -22,11 +22,7 @@ class Contato extends CI_Controller {
     }
 
 	
-	function mapa(){
-	
-		$this->load->view('mapa');
-	
-	}
+
     function enviar(){
 	
 				$dados['meta'] = "";
