@@ -8,6 +8,7 @@
 				
 				<li><a href="<?php echo base_url();?>administracao/parceiros/listar"><i class="icon icon-tint"></i> <span>Equipe</span></a></li>
 				<li><a href="<?php echo base_url();?>administracao/programacao/listar"><i class="icon icon-tint"></i> <span>Programação</span></a></li>
+				<li><a href="<?php echo base_url();?>administracao/noticias/listar"><i class="icon icon-tint"></i> <span>Notícias</span></a></li>
 				
 				
 				<li><a href="<?php echo base_url();?>administracao/usuarios/listar"><i class="icon icon-user"></i> <span>Usuários</span></a></li>

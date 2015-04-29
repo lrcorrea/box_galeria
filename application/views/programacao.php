@@ -30,9 +30,7 @@ $(document).ready(function(){
 	<div class="bg_sobre">
 			<h1>PROGRAMAÇÃO</h1>
 			<h3>CONFIRA A PROGRAMAÇÃO DO PROJETO BOX GALERIA</h3>
-			
-		</div>
-	<div class="centro">
+			<div class="centro">
 		<?php foreach($meses as $mes): 
 			$m = strftime('%m', strtotime($mes->data_inicio));
 			$y = strftime('%Y', strtotime($mes->data_inicio));
@@ -65,4 +63,6 @@ $(document).ready(function(){
 		<?php endforeach;?>	
 		
 	</div>
+	</div>
+	
 </section>
