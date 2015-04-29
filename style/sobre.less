@@ -52,3 +52,147 @@
 		margin-top: 50px;
 	}
 }
+
+
+.month{
+	float:left;
+	width:100%;
+	border-bottom:1px solid @laranja;
+	position:relative;
+	font-family:@titulo;
+	color:@laranja;
+	font-size:30px;
+	margin-top:10px;
+	margin-bottom:10px;
+	cursor:pointer;
+
+	&:after{
+		content:"";
+		position:absolute;
+		right:10px;
+		top:13px;
+		border-left: 8px solid transparent;
+	    border-right: 8px solid transparent;
+	    border-top: 8px solid @laranja;
+	}
+
+
+	.dentro_month{
+		display:none;
+		color:#000;
+		font-size:15px;
+
+		span{
+			color:@laranja;
+		}
+
+		
+	}
+
+}
+
+.month2{
+	float:left;
+	width:100%;
+	border-bottom:1px solid @laranja;
+	position:relative;
+	font-family:@titulo;
+	color:@laranja;
+	font-size:30px;
+	margin-top:10px;
+	margin-bottom:10px;
+	cursor:pointer;
+	.dentro_month{
+		display:none;
+		color:#000;
+		font-size:15px;
+
+		span{
+			color:@laranja;
+		}
+
+		
+	}
+
+	&:after{
+		content:"";
+		position:absolute;
+		right:10px;
+		top:13px;
+		border-left: 8px solid transparent;
+	    border-right: 8px solid transparent;
+	    border-bottom: 8px solid @laranja;
+	}
+}
+
+.programacao{
+	float:left;
+	width:45%;
+	margin-right:20px;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+
+.formulario{
+	input[type="text"]{
+		width:590px;
+		height:45px;
+		color:#fff;
+		padding-left:10px;
+		background:@verde;
+		float:left;
+		margin-top:25px;
+		border-radius:3px;
+		font-family:@texto;
+		font-size:13px;
+		outerline:none;
+		border:none;
+	}
+	textarea{
+		width:590px;
+		color:#fff;
+		height:145px;
+		padding-top:10px;
+		padding-left:10px;
+		background:@verde;
+		border:none;
+		float:left;
+		margin-top:20px;
+		border-radius:3px;
+		font-family:@texto;
+		font-size:13px;
+		outerline:none;
+	}
+
+	#enviar{
+		width:131px;
+		float:left;
+		border:none;
+		height:46px;
+		margin-left:40%;
+		margin-top:20px;
+		background: url(images/enviar.png);
+		cursor:pointer;
+		&:hover{
+			background-position:0px -46px;
+		}
+	}
+
+}
+
+	.formulario ::-webkit-input-placeholder { /* WebKit browsers */
+   color:#FFF;  
+   
+}
+.formulario :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#FFF;
+    
+}
+.formulario ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#FFF; 
+    
+}
+.formulario :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#FFF; 
+    
+} 

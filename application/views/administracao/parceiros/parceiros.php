@@ -22,21 +22,14 @@
 											
 										</div>
 									</div>
-									
 									<div class="control-group">
-										<label class="control-label">Tipo</label>
+										<label class="control-label">Cargo</label>
 										<div class="controls">
-											<select name="tipo" id="tipo">
-												<option value="">Selecione o Tipo de Cliente</option>
-												<option value="musica">Musica</option>
-												<option value="empresas">Empresas/Eventos</option>
-												<option value="outrasartes">Outras Artes</option>
-												<option value="projetos">Projetos Patrocinados</option>
-
-											</select>	
+											<input type="text" name="tipo" id="tipo" />
 											
 										</div>
 									</div>
+									
 									<div class="control-group">
 										<label class="control-label">Descricao</label>
 										<div class="controls">

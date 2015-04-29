@@ -25,16 +25,9 @@
 									
 									
 									<div class="control-group">
-										<label class="control-label">Tipo</label>
+										<label class="control-label">Cargo</label>
 										<div class="controls">
-											<select name="tipo" id="tipo">
-												<option value="<?php echo $dados[0]->tipo; ?>"><?php echo $dados[0]->tipo;?></option>
-												<option value="musica">Musica</option>
-												<option value="empresas">Empresas/Eventos</option>
-												<option value="outrasartes">Outras Artes</option>
-												<option value="projetos">Projetos Patrocinados</option>
-
-											</select>	
+											<input type="text" name="tipo" id="tipo"  value="<?php echo $dados[0]->tipo; ?>" />
 											
 										</div>
 									</div>
