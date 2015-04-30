@@ -9,7 +9,7 @@ class Sobre extends CI_Controller {
 
     function index() {
         
-		$dados['title'] = "Kriativa - Sobre";
+		$dados['title'] = "Box Galeria - Sobre";
 		
 		$dados['meta'] = "<meta name='description' content='' />";
 		

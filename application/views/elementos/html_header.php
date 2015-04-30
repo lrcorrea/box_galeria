@@ -2,6 +2,7 @@
 <html>
   <head>
     
+    <link rel='shortcut icon' type='image/x-icon' href='<?php echo base_url();?>style/images/favicon.ico' />
     <link type="text/css" rel="stylesheet" href="<?php echo base_url();?>style/fontes.css"/>
     <link type="text/css" rel="stylesheet" href="<?php echo base_url();?>style/estilo.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/shadowbox.css" />
