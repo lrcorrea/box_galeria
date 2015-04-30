@@ -6,6 +6,7 @@
     <link type="text/css" rel="stylesheet" href="<?php echo base_url();?>style/estilo.css"/>
     <script type="text/javascript" src="<?php echo base_url();?>js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>js/easySlider1.7.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.MultiFile.min.js" type="text/javascript" language="javascript"></script> 
 
 
     <meta charset="UTF-8">

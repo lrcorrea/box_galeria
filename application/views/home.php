@@ -4,6 +4,12 @@
 	  $("#slider").easySlider({
 		    //continuous: true
 	 	 });
+
+	  $(".inscreva_se").click(function(){
+
+	  		$(".inscricao").slideToggle();
+	  		return false;
+	  });
  	}); 
 </script>
 
@@ -16,6 +22,39 @@
 		
 	</div>
 </section>
+<section class="inscricao">
+	<div class="centro">
+		<h1>INSCRIÇÃO</h1>
+		<form method="post" action="">
+			
+					<input type="text" required name="nome" placeholder="Nome" />
+					<input type="text" required name="naturalidade" placeholder="Naturalidade" />
+					<input type="text" required name="formacao" placeholder="Formação" />
+					<input type="text" required name="rg" placeholder="Rg" />
+					<input type="text" required name="cpf" placeholder="Cpf" />
+					<input type="text" required name="endereco" placeholder="Endereço" />
+					<input type="text" required name="cep" placeholder="Cep" />
+					<input type="text" required name="telefone1" placeholder="Telefone Residencial" />
+					<input type="text"  name="telefone2" placeholder="Telefone Celular" />
+					<input type="text" required name="email" placeholder="E-mail" />
+					<input type="text"  name="portfolio" placeholder="Perfil e páginas em redes sociais, Currículo Lattes, galerias virtuais, etc)" />
+					
+
+					<textarea name="atividades" required style="clear:left;" placeholder="Principais Atividades realizadas (EXPOSIÇÕES, PALESTRAS, CURSOS, WORSHOPS, ETC)"></textarea>
+					<textarea required name="curriculo" placeholder="Curriculo Resumido"></textarea>
+					
+					<label>
+						Portfólio, com no mínimo 8 e no máximo 12 fotografias de obras realizadas, em boa resolução 
+						<input type="file" required name="userfile[]" id="imagem" size="20" class="multi" />
+					</label>
+					<input type="submit" id="enviar" value="" />
+					
+		</form>	
+			
+
+		
+	</div>
+</section>	
 <section class="conteudo">
 <div class="centro">
 	<div class="ultimas_noticias">

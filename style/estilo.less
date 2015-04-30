@@ -138,6 +138,103 @@
 		margin-top: -50px;
 	}
 }
+
+.inscricao{
+	width:100%;
+	float:left;
+	
+	display:none;
+	padding-top:10px;
+	padding-bottom:150px;
+	background:#FFF;
+	border-bottom:3px solid @laranja;
+	h1{
+		font-size: 40px;
+		font-family: @titulo;
+		color: @laranja;
+		text-align: center;
+		
+	}
+
+	label{
+		width:450px;
+		height:45px;
+		float:left;
+		margin-top:25px;
+		color:@laranja;
+		font-family:@texto;
+		font-size:13px;
+	}
+
+	input[type="text"]{
+		width:450px;
+		height:45px;
+		color:#fff;
+		padding-left:10px;
+		background:@verde;
+		float:left;
+		margin-right:30px;
+		margin-top:25px;
+		border-radius:3px;
+		font-family:@texto;
+		font-size:13px;
+		outerline:none;
+		border:none;
+		text-transform:capitalize;
+	}
+	textarea{
+		width:450px;
+		color:#fff;
+		height:145px;
+		padding-top:10px;
+		padding-left:10px;
+		background:@verde;
+		border:none;
+		float:left;
+		margin-top:25px;
+		border-radius:3px;
+		font-family:@texto;
+		font-size:13px;
+		outerline:none;
+		margin-right:30px;
+
+	}
+
+	#enviar{
+		width:131px;
+		float:left;
+		border:none;
+		height:46px;
+		margin-left:41px;
+		margin-top:20px;
+		background: url(images/enviar.png);
+		cursor:pointer;
+		&:hover{
+			background-position:0px -46px;
+		}
+	}
+
+
+}
+
+
+	.inscricao ::-webkit-input-placeholder { /* WebKit browsers */
+   color:#FFF;  
+   
+}
+.inscricao :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#FFF;
+    
+}
+.inscricao ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#FFF; 
+    
+}
+.inscricao :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#FFF; 
+    
+} 
+
 .conteudo_home{
 	float: left;
 	background: url(images/meio_bg.jpg) top center no-repeat;
