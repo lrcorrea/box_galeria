@@ -92,7 +92,7 @@
 			<div id="slider">
 				<ul>	
 					<li>	
-				<?php $i = 0; foreach($noticias as $noticia): ?>
+				<?php if($noticias){  $i = 0; foreach($noticias as $noticia): ?>
 				<?php 
 					$this->db->where("id_noticia",$noticia->id);
 					$foto = $this->db->get("fotos_noticia")->result();
@@ -111,7 +111,7 @@
 						} ?>
 						
 					
-				<?php $i++; endforeach; ?>
+				<?php $i++; endforeach; } ?>
 					</li>			
 				</ul>
 			</div>
