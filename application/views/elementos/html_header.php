@@ -4,16 +4,21 @@
     
     <link type="text/css" rel="stylesheet" href="<?php echo base_url();?>style/fontes.css"/>
     <link type="text/css" rel="stylesheet" href="<?php echo base_url();?>style/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/shadowbox.css" />
     <script type="text/javascript" src="<?php echo base_url();?>js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>js/easySlider1.7.js"></script>
     <script src="<?php echo base_url(); ?>js/jquery.MultiFile.min.js" type="text/javascript" language="javascript"></script> 
-
+    <script type="text/javascript" src="<?php echo base_url();?>js/shadowbox.js"></script>
 
     <meta charset="UTF-8">
      <title><?php echo $title;?></title>
     <?php echo $meta;?>
+    <script type="text/javascript">
+    Shadowbox.init();
+   
+    </script>
 </head>
-  <body>
+<body>
 <section class="topo">
   <div class="centro">
     <img class="logo" src="<?php echo base_url();?>style/images/logo.png" alt="Box Galeria">

@@ -10,6 +10,24 @@
 	  		$(".inscricao").slideToggle();
 	  		return false;
 	  });
+
+	  <?php if($enviou){ ?>
+
+	  		$(".inscricao").slideDown();
+
+	 <?php } ?>
+
+
+	 $("#inscricaoform").submit(function(){
+
+	 	var imgVal = $('#imagem').val(); 
+        if(imgVal=='') 
+        { 
+            alert("Selecione uma Foto"); 
+            return false; 
+        } 
+
+	 });
  	}); 
 </script>
 
@@ -24,8 +42,8 @@
 </section>
 <section class="inscricao">
 	<div class="centro">
-		<h1>INSCRIÇÃO</h1>
-		<form method="post" action="">
+		<h1>INSCRIÇÃO <?php if($enviou){ echo "ENVIADA COM SUCESSO"; } ?></h1>
+		<form method="post" enctype="multipart/form-data" id="inscricaoform" action="<?php echo base_url();?>home/increve">
 			
 					<input type="text" required name="nome" placeholder="Nome" />
 					<input type="text" required name="naturalidade" placeholder="Naturalidade" />
@@ -35,9 +53,9 @@
 					<input type="text" required name="endereco" placeholder="Endereço" />
 					<input type="text" required name="cep" placeholder="Cep" />
 					<input type="text" required name="telefone1" placeholder="Telefone Residencial" />
-					<input type="text"  name="telefone2" placeholder="Telefone Celular" />
+					<input type="text" name="telefone2" placeholder="Telefone Celular" />
 					<input type="text" required name="email" placeholder="E-mail" />
-					<input type="text"  name="portfolio" placeholder="Perfil e páginas em redes sociais, Currículo Lattes, galerias virtuais, etc)" />
+					<input type="text" name="portfolio" placeholder="Perfil e páginas em redes sociais, Currículo Lattes, galerias virtuais, etc)" />
 					
 
 					<textarea name="atividades" required style="clear:left;" placeholder="Principais Atividades realizadas (EXPOSIÇÕES, PALESTRAS, CURSOS, WORSHOPS, ETC)"></textarea>
@@ -45,7 +63,7 @@
 					
 					<label>
 						Portfólio, com no mínimo 8 e no máximo 12 fotografias de obras realizadas, em boa resolução 
-						<input type="file" required name="userfile[]" id="imagem" size="20" class="multi" />
+						<input type="file"  name="userfile[]" id="imagem" size="20" class="multi" />
 					</label>
 					<input type="submit" id="enviar" value="" />
 					
@@ -84,7 +102,7 @@
 							<div><?php echo data_us_to_br($noticia->data);?></div>
 							<img src="<?php echo base_url();?>phpthumb/phpThumb.php?src=../imgs/<?php echo $foto[0]->nome;?>&w=185&h=123&zc=1&q=100">
 							<p><?php echo $noticia->titulo;?></p>
-							<a href="<?php echo base_url();?>noticias/detahe/<?php echo $noticia->id;?>">LEIA MAIS</a>
+							<a href="<?php echo base_url();?>noticias/detalhe/<?php echo $noticia->id;?>">LEIA MAIS</a>
 						</div>
 						
 						<?php if($i == 2) { 
@@ -106,8 +124,8 @@
 <div class="bg_lugar">
 	<div class="centro">
 		<h1>ONDE ESTAMOS?</h1>
-		<p>CONFIRA A <span>PROGRAMAÇÃO</span> PROJETO, OS <span>ARTISTAS SELECIONADOS</span> E QUAL<br/>SERÁ O <span>PRÓXIMO BAIRRO</span> QUE IRÁ RECEBER O PROJETO BOX GALERIA</p>
-		<a href="" class="saiba_mais">SAIBA MAIS</a>
+		<p>CONFIRA A <span>PROGRAMAÇÃO</span> DO PROJETO, OS <span>ARTISTAS SELECIONADOS</span> E QUAL<br/>SERÁ O <span>PRÓXIMO BAIRRO</span> QUE IRÁ RECEBER O PROJETO BOX GALERIA</p>
+		<a href="<?php echo base_url();?>programacao" class="saiba_mais">SAIBA MAIS</a>
 	</div>
 </div>
 </section>

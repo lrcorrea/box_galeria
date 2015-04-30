@@ -13,6 +13,7 @@ class Home extends CI_Controller {
 		
 		$dados['meta'] = "<meta name='description' content='' />";
 		
+		$dados['enviou'] = false;
 		
 		$this->db->limit("9");
 		$this->db->order_by("data","desc");
@@ -28,19 +29,19 @@ class Home extends CI_Controller {
     function increve(){
 
 
-    	$dados['nome'] = $this->input->post("nome");
-    	$dados['naturalidade'] = $this->input->post("naturalidade");
-    	$dados['formacao'] = $this->input->post("formacao");
-    	$dados['rg'] = $this->input->post("rg");
-    	$dados['cpf'] = $this->input->post("cpf");
-    	$dados['endereco'] = $this->input->post("endereco");
-    	$dados['cep'] = $this->input->post("cep");
-    	$dados['telefone1'] = $this->input->post("telefone1");
-    	$dados['telefone2'] = $this->input->post("telefone2");
-    	$dados['email'] = $this->input->post("email");
-    	$dados['portfolio'] = $this->input->post("portfolio");
-    	$dados['atividades'] = $this->input->post("atividades");
-    	$dados['curriculo'] = $this->input->post("portfolio");
+    	$data['nome'] = $this->input->post("nome");
+    	$data['naturalidade'] = $this->input->post("naturalidade");
+    	$data['formacao'] = $this->input->post("formacao");
+    	$data['rg'] = $this->input->post("rg");
+    	$data['cpf'] = $this->input->post("cpf");
+    	$data['endereco'] = $this->input->post("endereco");
+    	$data['cep'] = $this->input->post("cep");
+    	$data['telefone1'] = $this->input->post("telefone1");
+    	$data['telefone2'] = $this->input->post("telefone2");
+    	$data['email'] = $this->input->post("email");
+    	$data['portfolio'] = $this->input->post("portfolio");
+    	$data['atividades'] = $this->input->post("atividades");
+    	$data['curriculo'] = $this->input->post("curriculo");
 
 
     	if($_FILES['userfile']['name']){
@@ -73,7 +74,7 @@ class Home extends CI_Controller {
                     $this->load->library('email');
                 
                         $this->email->from("contato@boxgaleria.com.br","Box Galeria");
-                        $this->email->to($email);
+                        $this->email->to("contato@boxgaleria.com.br");
                         $this->email->subject('Inscrição encaminhado pelo Website');
                         $this->email->message("Nome: " . $data['nome'] . 
                                         "\n\n Email: " . $data['email'] . 
@@ -101,8 +102,16 @@ class Home extends CI_Controller {
                 
                 $this->email->send();
 
-                $enviado = true;
-                $this->detalhes($data['id'],$enviado);
+                $dados['enviou'] = true;
+                $dados['title'] = "Box Galeria";
+                $dados['meta'] = "<meta name='description' content='' />";
+                $this->db->limit("9");
+				$this->db->order_by("data","desc");
+				$dados['noticias'] = $this->db->get("noticias")->result();
+		
+              	$this->load->view('elementos/html_header',$dados);
+		        $this->load->view('home',$dados);
+		        $this->load->view('elementos/html_footer',$dados);
                 
         }
 
