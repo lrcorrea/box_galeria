@@ -21,9 +21,15 @@
 	 $("#inscricaoform").submit(function(){
 
 	 	var imgVal = $('#imagem').val(); 
+	 	var img2Val = $('#imagem2').val(); 
         if(imgVal=='') 
         { 
-            alert("Selecione uma Foto"); 
+            alert("Selecione as fotos e o comprovante de re"); 
+            return false; 
+        } 
+         if(imgVal2=='') 
+        { 
+            alert("Selecione os comprovantes de residencia"); 
             return false; 
         } 
 
@@ -36,7 +42,7 @@
 	<div class="centro">
 	  <h1>PROJETO BOX GALERIA LEVA EXPOSIÇÕES EM FORMATO ITINERANTE A BAIRROS DE SALVADOR</h1>
 		<a class="inscreva_se" href="">ARTISTAS, INSCREVAM-SE</a>
-		<p><a href="">Clique aqui</a> e leia o regulamento</p>
+		<p><a href="<?php echo base_url();?>style/convoca.pdf">Clique aqui</a> e leia o regulamento</p>
 		
 	</div>
 </section>
@@ -45,7 +51,7 @@
 		<h1>INSCRIÇÃO <?php if($enviou){ echo "ENVIADA COM SUCESSO"; } ?></h1>
 		<form method="post" enctype="multipart/form-data" id="inscricaoform" action="<?php echo base_url();?>home/increve">
 			
-					<input type="text" required name="nome" placeholder="Nome" />
+					<input type="text" name="nome" placeholder="Nome" />
 					<input type="text" required name="naturalidade" placeholder="Naturalidade" />
 					<input type="text" required name="formacao" placeholder="Formação" />
 					<input type="text" required name="rg" placeholder="Rg" />
@@ -66,6 +72,14 @@
 						<input type="file"  name="userfile[]" id="imagem" size="20" class="multi" />
 					</label>
 					<input type="submit" id="enviar" value="" />
+					<div style="clear:both"></div>
+					<label>
+						<b>Comprovante de residencia dos ultimos 3 meses</b>
+						<input type="file"  name="userfile2[]" id="imagem2" size="20" class="multi" />
+					</label>
+					
+					
+					
 					
 		</form>	
 			
@@ -77,13 +91,13 @@
 <div class="centro">
 	<div class="ultimas_noticias">
 		<h1>ÚLTIMAS NOTÍCIAS</h1>
-		<p>Acompanhe todas as novidades sobre o projeto Box Galeria e saiba por onde iremos passas<br/><br/><br/>
-			Siga a Box Galeria nas Redes Sociais</p>
-		<div class="redes_sociais">
+		<p>Acompanhe todas as novidades sobre o projeto Box Galeria e saiba por onde iremos passas<br/><br/></p>
+		<!--<div class="redes_sociais">
 			<a href="" class="social fb_icon"></a>
 			<a href="" class="social tt_icon"></a>
 			<a href="" class="social instagram_icon"></a>
-		</div>
+		</div>-->
+		<div class="fb-like" data-href="https://www.facebook.com/pages/Box-Galeria/645103128956459" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 	</div>
 	<div class="noticias">
 		

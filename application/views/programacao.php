@@ -50,10 +50,10 @@ $(document).ready(function(){
 								<span>Cidade</span> <?php echo $pro->cidade;?> <br />
 								<span>Data:</span> <?php echo data_us_to_br($pro->data_inicio);?>  a <?php echo data_us_to_br($pro->data_fim);?><br />
 								<span>Local</span> <?php echo $pro->local;?> <br />
-								<span>Periodo de Visitação</span> <?php echo $pro->per_visi;?> <br />
+								<!--<span>Periodo de Visitação</span> <?php echo $pro->per_visi;?> <br />-->
 								<span>Atividades</span> <?php echo $pro->atividades;?> <br />
-								<span>Visitas Guiadas</span> <?php echo $pro->visi_gui;?> <br />
-								<span>Oficinas</span> <?php echo $pro->oficinas;?> <br />
+								<!--<span>Visitas Guiadas</span> <?php echo $pro->visi_gui;?> <br />
+								<span>Oficinas</span> <?php echo $pro->oficinas;?> <br />-->
 						</div>
 						
 					<?php endforeach;?>

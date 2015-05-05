@@ -57,13 +57,41 @@ class Home extends CI_Controller {
                     $this->load->library('upload', $config);
                     $this->load->library('Multi_upload');
 
-                    $files = $this->multi_upload->go_upload();
+                    $files = $this->multi_upload->go_upload("userfile");
 
 
 
                     $fotos['nome_crip'] =    $this->multi_upload->data();
 
                     
+                
+        }
+
+        if($_FILES['userfile2']['name']){
+    
+                    $config['upload_path'] = 'inscricao'; // server directory
+                    $config['allowed_types'] = 'png|jpg|rar'; // by extension, will check for whether it is an image
+                    $config['max_size'] = '0'; // in kb
+                    $config['max_width'] = '0';
+                    $config['max_height'] = '0';
+                    $config['encrypt_name'] = TRUE;
+
+                    
+                    $this->load->library('upload', $config);
+                    $this->load->library('Multi_upload');
+
+                    $files2 = $this->multi_upload->go_upload("userfile2");
+
+
+
+                    $fotos['nome_crip2'] =    $this->multi_upload->data();
+
+                    
+                
+        }
+
+            
+
                     
                     
                     
@@ -99,6 +127,13 @@ class Home extends CI_Controller {
                             endforeach;
                         
                         }
+                        if($fotos['nome_crip2']){
+                
+                            foreach($fotos['nome_crip'] as $anexos):
+                                $this->email->attach('inscricao/'.$anexos);
+                            endforeach;
+                        
+                        }
                 
                 $this->email->send();
 
@@ -106,14 +141,12 @@ class Home extends CI_Controller {
                 $dados['title'] = "Box Galeria";
                 $dados['meta'] = "<meta name='description' content='' />";
                 $this->db->limit("9");
-				$this->db->order_by("data","desc");
-				$dados['noticias'] = $this->db->get("noticias")->result();
-		
-              	$this->load->view('elementos/html_header',$dados);
-		        $this->load->view('home',$dados);
-		        $this->load->view('elementos/html_footer',$dados);
-                
-        }
+                $this->db->order_by("data","desc");
+                $dados['noticias'] = $this->db->get("noticias")->result();
+        
+                $this->load->view('elementos/html_header',$dados);
+                $this->load->view('home',$dados);
+                $this->load->view('elementos/html_footer',$dados);
 
 
 

@@ -5,8 +5,8 @@
                                 <p>contato@boxgaleria.com.br</p>
                         </div>
                         <div class="telefone contato_rodape">
-                                <img src="<?php echo base_url();?>style/images/fone_icon.png"/>
-                                <p> (71) 9148-4281 | 8771-2243</p>
+                                <img style="margin-left:35px;" src="<?php echo base_url();?>style/images/fone_icon.png"/>
+                                <p> (71) 3022-8053</p>
                         </div>
                         <div class="apoiadores">
                                

@@ -20,6 +20,14 @@
     </script>
 </head>
 <body>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3&appId=211617532293360";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <section class="topo">
   <div class="centro">
     <img class="logo" src="<?php echo base_url();?>style/images/logo.png" alt="Box Galeria">
@@ -30,16 +38,18 @@
         <li class="abresub">
           <a href="" id="visite">VISITE</a>
           <ul class="submenu">
-           <!-- <li><a href="">ARTISTAS SELECIONADOS</a></li>-->
+            <li><a href="<?php echo base_url();?>artistas">ARTISTAS SELECIONADOS</a></li>
             <li><a href="<?php echo base_url();?>programacao">PROGRAMAÇÃO</a></li>
+            <li><a href="<?php echo base_url();?>bairro">BAIRROS</a></li>
           <!--  <li><a href="">BAIRRO</a></li>-->
           </ul>
         </li>
+        <li><a href="<?php echo base_url();?>noticias">Notícias</a></li>
         <li><a href="<?php echo base_url();?>equipe">EQUIPE</a></li>
         <li><a href="<?php echo base_url();?>contato">CONTATO</a></li>
       </ul>
       <div class="fb_topo">
-        <a href=""><img src="<?php echo base_url();?>style/images/facebook_icon_menu.png"></a>
+        <a href="https://www.facebook.com/pages/Box-Galeria/645103128956459?__mref=message_bubble" target="_blank"><img src="<?php echo base_url();?>style/images/facebook_icon_menu.png"></a>
       </div>
     </div>
   </div>

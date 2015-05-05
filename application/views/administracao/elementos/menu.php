@@ -6,6 +6,8 @@
 				<li class="active"><a href="<?php echo base_url();?>administracao"><i class="icon icon-home"></i> <span>Página Inicial</span></a></li>
 			
 				
+				<li><a href="<?php echo base_url();?>administracao/artistas/listar"><i class="icon icon-tint"></i> <span>Artistas</span></a></li>
+				<li><a href="<?php echo base_url();?>administracao/bairro/listar"><i class="icon icon-tint"></i> <span>Bairros</span></a></li>
 				<li><a href="<?php echo base_url();?>administracao/parceiros/listar"><i class="icon icon-tint"></i> <span>Equipe</span></a></li>
 				<li><a href="<?php echo base_url();?>administracao/programacao/listar"><i class="icon icon-tint"></i> <span>Programação</span></a></li>
 				<li><a href="<?php echo base_url();?>administracao/noticias/listar"><i class="icon icon-tint"></i> <span>Notícias</span></a></li>
